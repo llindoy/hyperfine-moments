@@ -2,16 +2,18 @@
 
 An implementation of the hyperfine moment fitting method (Lindoy and Manolopoulos, Phys. Rev. Lett. 120, 220604) for simulating the real time quantum dynamics of isotropic central spin Hamiltonians:
 
-$$ 
-\hat{H}  \omega_z \hat{S}_z + \sum^N_{i1} a_i \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{i} 
-$$
+%%latex
+\begin{equation}
+\hat{H} = \omega_z \hat{S}_{z} + \sum^N_{i=1} a_i \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{i} 
+\end{equation}
+%%
 
 with an initial infinite temperature nuclear spin bath.
 
 This method approximates the Hamiltonian of this system as
 
 $$ 
-\hat{H}  \omega_{z} \hat{S}_{z} + \sum^M_{b1} a_{b} \sum_{i1}^{N_b} \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{bi} 
+\hat{H} = \omega_{z} \hat{S}_{z} + \sum^M_{b=1} a_{b} \sum_{i=1}^{N_b} \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{bi} 
 $$
 
 where we have have selected $M$ sets of $N_b$ nuclear spins that interact with the central spin with the same hyperfine coupling constant.  Where the total number of nuclear spins is the same as in the original problem, and the modified hyperfine coupling constants are chosen so that we reproduce the first $M+1$ moments of the original hyperfine distribution.
