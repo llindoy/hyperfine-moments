@@ -3,7 +3,7 @@
 An implementation of the hyperfine moment fitting method (Lindoy and Manolopoulos, Phys. Rev. Lett. 120, 220604) for simulating the real time quantum dynamics of isotropic central spin Hamiltonians:
 
 $$ 
-\hat{H} = \omega_z \hat{S}_\\{z} + \sum^N_{i=1} a_i \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{i} 
+\hat{H} = \omega_z \hat{S}_\{z\} + \sum^N_{i=1} a_i \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{i} 
 $$
 
 with an initial infinite temperature nuclear spin bath.
