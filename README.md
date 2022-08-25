@@ -2,11 +2,11 @@
 
 An implementation of the hyperfine moment fitting method (Lindoy and Manolopoulos, Phys. Rev. Lett. 120, 220604) for simulating the real time quantum dynamics of isotropic central spin Hamiltonians:
 
-%%latex
+$$
 \begin{equation}
 \hat{H} = \omega_z \hat{S}_{z} + \sum^N_{i=1} a_i \hat{\boldsymbol{S}} \cdot \hat{\boldsymbol{I}}_{i} 
 \end{equation}
-%%
+$$
 
 with an initial infinite temperature nuclear spin bath.
 
@@ -30,8 +30,8 @@ External:
 
 
 Submodules (automatically downloaded if the respository is cloned using git clone --recurse-submodules https://github.com/lpjpl/hyperfinemoments.git):
-- [linalg](https://github.com/lpjpl/linalg) wrapper for the BLAS and LAPACK libraries
-- [utils_cpp](https://github.com/lpjpl/utils_cpp) input file parsing/exception handling/maths utility functions
+- [linalg](https://github.com/llindoy/linalg) wrapper for the BLAS and LAPACK libraries
+- [utils_cpp](https://github.com/llindoy/utils_cpp) input file parsing/exception handling/maths utility functions
 
 # Compile Instructions
 This code requires cmake version 3.11 in order to compile. From hyperfine moment base directory (${hyperfine_base}) run:
