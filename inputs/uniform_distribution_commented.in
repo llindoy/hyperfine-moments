@@ -1,0 +1,65 @@
+{
+    "#comment: system" : "a json object specifying the interactions present in the spin system that is being treated.",
+    "system" : 
+    {
+        "#comment: type (string)" : "the type of spin problem to consider.  Currently only central spin models are supported.",
+        "type" : "central spin",
+
+        "#comment: omega (real number)" : "the magnitude of the zeeman contribution to the Hamiltonian",
+        "omega" : 0.0,
+
+        "#comment: A(i, n) (string specifying internals of chaiscript function)" : "The contents of a chaiscript function that takes the spin index i and number of spins N and returns the hyperfine coupling constant.  In order to use this variable it is necessary to compile this code with the option USE_CHAI=On (default behaviour).",
+        "A(i,n)" : "return sqrt(6.0*N/(2.0*N*N+3.0*N+1))*(N+1.0-i)/N;",
+        
+        "#comment: N (unsigned int)" : "The total number of nuclear spins to include in the system.",
+        "N" : 49,
+
+        "#comment: tau (real number)" : "A scaling parameter for the hyperfine distribution a_i tau = A(i, n)",
+        "tau" : 1
+    },
+
+        
+    "#comment: M (unsigned int > 0)" : "The number of blocks M used for the symmetrised Hamiltonian approximation.", 
+    "M" : 5, 
+
+    "#comment: ctol (real number 0 <= x < 1)" : "A tolerance parameter that is used to determine which symmetry blocks are included in the calculations.  Here we include the symmetry blocks with largest weight such that sum_i w_i = 1-ctol.  E.g. if we exactly compute the dynamics of all symmetry block then the error in observables (for the symmetrised Hamiltonian will be bounded by ctol", 
+    "ctol" : 1e-3,
+
+    "#comment: print block correlations (bool - default false)" : "Boolean specifying whether or not to print (to stdout) the correlation functions for each symmetry block", 
+    "print block correlations" : true,
+
+    "#comment: sample blocks (bool - defautl false)" : "Boolean specifying whether or not to stochastically sample the number of trajectories per block.  If this option is used min Ntraj is ignored.", 
+    "sample blocks" : true,
+
+    "#comment: Ntraj (unsigned int)" : "A suggestion on the number of trajectories to run.  The actual number run will depend on the min Ntraj parameter and the weight and Hilbert space dimension of the various symmetry blocks that are obtained.",
+    "Ntraj" : 10000,
+
+    "#comment: min Ntraj (unsigned int - default = 0)" : "The minimum number of trajectories to run for each of the included symmetry blocks.  This option is ignored if sample blocks is true.",
+    "min Ntraj" : 2, 
+
+    "#comment: dt (real type)" : "The integration time step.", 
+    "dt" : 0.1,
+
+    "#comment: tmax (real type)" : "The maximum integration time.", 
+    "tmax" : 100,
+
+    "#comment: psi0 (vector(complex types - (real types/string of complex numbers of the form a+bj)))" : "The initial central spin wavefunction.  We assume a summation over all I
+    "psi0" : [1, 0],
+
+    "#comment: ops (vector of hermitian matrices or a single hermitian matrix) " : "The operators for which we will evaluate the expectation value \sum_I <\psi0, I| op(t) |\psi0, I>",
+    "ops" : [
+                [ [0, 1], [1,  0]],
+                [ [0, "-1.0j"], ["1.0j",  0]],
+                [ [1, 0], [0, -1]]
+            ],
+
+    "#comment: outputfile (string - default stdout)" : "The location to print output to.  By default this is stdout.",
+    "outfile" : "test_M_5_10000.out",
+    
+    "#comment: krylov tol (real type > 0)" : "The krylov subspace tolerance for the lancsoz integrator.", 
+    "krylov tol" : 1e-8,
+    "#comment: krylov dim (size type > 1)" : "The krylov subspace dimension for the lancsoz integrator.", 
+    "krylov dim" : 6
+}
+
+
