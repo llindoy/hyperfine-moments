@@ -27,7 +27,7 @@ External:
 - Optional: [ChaiScript_Extras](https://github.com/ChaiScript/ChaiScript_Extras) necessary for ChaiScript function based specification of hyperfine coupling constants
 
 
-Submodules (automatically downloaded if the respository is cloned using git clone --recurse-submodules https://github.com/lpjpl/hyperfinemoments.git):
+Submodules (automatically downloaded if the respository is cloned using git clone --recurse-submodules https://github.com/llindoy/hyperfinemoments.git):
 - [linalg](https://github.com/llindoy/linalg) wrapper for the BLAS and LAPACK libraries
 - [utils_cpp](https://github.com/llindoy/utils_cpp) input file parsing/exception handling/maths utility functions
 
