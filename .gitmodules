@@ -1,0 +1,6 @@
+[submodule "linalg"]
+	path = linalg
+	url = https://github.com/lpjpl/linalg.git
+[submodule "utils"]
+	path = utils
+	url = https://github.com/lpjpl/utils_cpp.git

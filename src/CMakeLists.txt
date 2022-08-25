@@ -254,5 +254,5 @@ endif()
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${EOS_INCLUDE_DIRECTORIES})
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${LINALG_INCLUDE_DIRECTORIES})
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${TTNS_INCLUDE_DIRECTORIES})
-target_link_libraries(${CMAKE_PROJECT_NAME} linalg ${LINALG_LIBS} ${LIBS}) 
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${UTILS_INCLUDE_DIRECTORIES})
+target_link_libraries(${CMAKE_PROJECT_NAME} utils linalg ${LINALG_LIBS} ${LIBS}) 

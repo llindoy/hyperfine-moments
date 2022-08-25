@@ -21,9 +21,8 @@
 #include "chaiscript/extras/math.hpp"
 #endif
 
-#include <utils/krylov_integrator.hpp>
-#include <utils/io/input_wrapper.hpp>
-using IOWRAPPER = io::input_wrapper<io::rapidjson_tag>;
+#include <krylov_integrator.hpp>
+#include <io/input_wrapper.hpp>
 
 template <typename T> 
 void welford_variance_update(std::array<T, 2>& curr, const T& val, size_t count)
@@ -300,7 +299,7 @@ void central_spin(const IObj& doc)
             {
                 if(n_to_run[index] != 0)
                 {
-                    traj_weighting[index] = 1.0/n_to_run[index];
+                    traj_weighting[index] = 1.0/ntraj;
                 }
                 else
                 {
@@ -364,7 +363,7 @@ void central_spin(const IObj& doc)
                     linalg::vector<complex_type> psi_I(nhilb/2);
 
                     //set up the krylov subspace integrator
-                    krylov_integrator<complex_type> integ(krylov_dim, nhilb, krylov_tol);
+                    utils::krylov_integrator<complex_type> integ(krylov_dim, nhilb, krylov_tol);
                     complex_type ni(0, -1);
 
                     for(size_t i = 0; i < vals_local.size(); ++i)
