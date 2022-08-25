@@ -14,13 +14,16 @@ The hyperfinemoments program expects a string specifying the path to the input f
 
 ## Dependencies
 External:
-    - Required: [RapidJSON](https://rapidjson.org/) - input file parsing
-    - Optional: [ChaiScript](https://chaiscript.com/) - necessary fro ChaiScript function based specification of hyperfine coupling constants
-    - Optional: [ChaiScript_Extras](https://github.com/ChaiScript/ChaiScript_Extras) - necessary fro ChaiScript function based specification of hyperfine coupling constants
+    - Required: [RapidJSON](https://rapidjson.org/) input file parsing
+
+    - Optional: [ChaiScript](https://chaiscript.com/) necessary for ChaiScript function based specification of hyperfine coupling constants
+
+    - Optional: [ChaiScript_Extras](https://github.com/ChaiScript/ChaiScript_Extras) necessary for ChaiScript function based specification of hyperfine coupling constants
+
 
 Submodules (automatically downloaded if the respository is cloned using git clone --recurse-submodules https://github.com/lpjpl/hyperfinemoments.git):
-    - [linalg](https://github.com/lpjpl/linalgt) - wrapper for the BLAS and LAPACK libraries
-    - [utils_cpp](https://github.com/lpjpl/utils_cpp) - input file parsing/exception handling/maths utility functions
+    - [linalg](https://github.com/lpjpl/linalgt) wrapper for the BLAS and LAPACK libraries
+    - [utils_cpp](https://github.com/lpjpl/utils_cpp) input file parsing/exception handling/maths utility functions
 
 # Compile Instructions
 This code requires cmake version 3.11 in order to compile. From hyperfine moment base directory (${hyperfine_base}) run:
